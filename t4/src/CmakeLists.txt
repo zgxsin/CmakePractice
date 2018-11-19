@@ -1,0 +1,6 @@
+ADD_EXECUTABLE(main main.cpp)
+FIND_PATH(myHeader hello.h)
+IF(myHeader)
+INCLUDE_DIRECTORIES(${myHeader})
+ENDIF(myHeader)
+TARGET_LINK_LIBRARIES(main hello.a)
